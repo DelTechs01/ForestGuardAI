@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Features from './pages/Features';
+import LiveMonitoring from './pages/LiveMonitoring';
+import FireAlerts from './pages/FireAlerts';
+import DeforestationReports from './pages/DeforestationReports';
+import AIDashboard from './pages/AIDashboard';
+import ConservationTips from './pages/ConservationTips';
+import NewsUpdates from './pages/NewsUpdates';
+import Partners from './pages/Partners';
+import ContactUs from './pages/ContactUs';
+import LoginPage from './pages/LoginPage';
+import SignupPage from './pages/SignupPage';
+import FAQ from './pages/FAQ';
+import NotFound from './pages/NotFound';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/live-monitoring" element={<LiveMonitoring />} />
+          <Route path="/fire-alerts" element={<FireAlerts />} />
+          <Route path="/deforestation-reports" element={<DeforestationReports />} />
+          <Route path="/ai-dashboard" element={<AIDashboard />} />
+          <Route path="/conservation-tips" element={<ConservationTips />} />
+          <Route path="/news-updates" element={<NewsUpdates />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
