@@ -105,8 +105,8 @@ function Footer() {
             <h3 className="text-lg font-semibold text-white mb-4">Get in Touch</h3>
             <ul className="space-y-2 mb-4">
               <li className="text-gray-400">Email: contact@forestguard.ai</li>
-              <li className="text-gray-400">Phone: +1 (555) 123-4567</li>
-              <li className="text-gray-400">Location: Green Valley, Earth</li>
+              <li className="text-gray-400">Phone: +254 (074) 276-6340</li>
+              <li className="text-gray-400">Location: Silicon Valley, Earth</li>
             </ul>
             <h3 className="text-lg font-semibold text-white mb-4">Newsletter</h3>
             <form onSubmit={handleNewsletterSubmit} className="space-y-2">
